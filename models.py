@@ -2,6 +2,8 @@ import torch
 from torch import nn
 from torchvision import models
 import timm
+from torch import nn
+from torchvision import models
 
 class CNNClassifier(nn.Module):
     def __init__(self, num_classes=4):
@@ -49,12 +51,6 @@ class CNNClassifier(nn.Module):
         x = self.fc_layers(x)
         return x
 
-
-# Pretrained model option (ResNet) using transfer learning
-# Pretrained model option (ResNet) using transfer learning
-import torch
-from torch import nn
-from torchvision import models
 
 class TransferLearningResNet(nn.Module):
     def __init__(self, num_classes=4, dropout_rate_1=0.3, dropout_rate_2=0.25):
