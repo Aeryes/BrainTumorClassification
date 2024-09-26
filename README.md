@@ -19,10 +19,10 @@ I also performed some visualizations of the data to see what I was working with 
 ![alt text](/images/train_data_no_transforms.png "Traning Data No Transforms")
 
 ### Here are 5 samples of the training data with data augmentation:
-![alt text](/images/train_data_no_transforms.png "Traning Data With Transforms")
+![alt text](/images/train_data_with_transforms.png "Traning Data With Transforms")
 
 ### Here are 5 samples of the validation data with no data augmentation:
-![alt text](/images/train_data_no_transforms.png "Validation Data No Transforms")
+![alt text](/images/validation_data_no_transforms.png "Validation Data No Transforms")
 
 ## Results
 ### Here is the training over 16 epochs:
