@@ -1,3 +1,5 @@
+# Thanks to Tim Dangeon on Kaggle --> https://www.kaggle.com/datasets/masoudnickparvar/brain-tumor-mri-dataset/discussion/482896 for the remove duplicate images code.
+
 import os
 import hashlib
 import torch
@@ -8,6 +10,7 @@ import matplotlib.pyplot as plt
 import numpy as np
 import seaborn as sns
 from PIL import Image
+from models import TransferLearningResNet  # Import your model architecture here
 
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 print(f"Using device: {device}")
@@ -62,6 +65,32 @@ def visualize_data(dataset, num_images=5):
 
     plt.show()
 
+# Function to evaluate model and generate confusion matrix
+def evaluate_model(model, loader, class_names):
+    model.eval()
+    y_true, y_pred = [], []
+
+    with torch.no_grad():
+        for features, labels in loader:
+            features, labels = features.to(device), labels.to(device)
+            outputs = model(features)
+            _, preds = torch.max(outputs, 1)
+            y_true.extend(labels.cpu().numpy())
+            y_pred.extend(preds.cpu().numpy())
+
+    # Confusion Matrix
+    cm = confusion_matrix(y_true, y_pred)
+    plt.figure(figsize=(8, 6))
+    sns.heatmap(cm, annot=True, fmt='d', cmap='Blues', xticklabels=class_names, yticklabels=class_names)
+    plt.xlabel('Predicted')
+    plt.ylabel('True')
+    plt.title('Confusion Matrix')
+    plt.show()
+
+    # Classification Report
+    print("\nClassification Report:")
+    print(classification_report(y_true, y_pred, target_names=class_names))
+
 # Main function for loading data, removing duplicates, and visualizing
 def main():
     # Define the transforms
@@ -85,27 +114,25 @@ def main():
     train_dataset_path = "data/Training"
     valid_dataset_path = "data/Testing"
 
-    # Load training dataset with transformations and without
+    # Load training dataset with transformations
     train_dataset = datasets.ImageFolder(root=train_dataset_path, transform=train_transforms)
-    train_dataset_no_transforms = datasets.ImageFolder(root=train_dataset_path)
     print(f"Number of training images: {len(train_dataset)}")
 
-    # Visualize a few images from the training dataset (with no transforms already applied)
-    visualize_data(train_dataset_no_transforms, num_images=5)
-
-    # Visualize a few images from the training dataset (with transforms already applied)
-    visualize_data(train_dataset, num_images=5)
-
-    # Load validation dataset with transformations and without
+    # Load validation dataset with transformations
     valid_dataset = datasets.ImageFolder(root=valid_dataset_path, transform=valid_transforms)
-    valid_dataset_no_transforms = datasets.ImageFolder(root=valid_dataset_path)
     print(f"Number of validation images: {len(valid_dataset)}")
 
-    # Visualize a few images from the validation dataset (with no transforms already applied)
-    visualize_data(valid_dataset_no_transforms, num_images=5)
+    # Create DataLoader for validation dataset
+    valid_loader = DataLoader(valid_dataset, batch_size=32, shuffle=False)
 
-    # Visualize a few images from the validation dataset (with transforms already applied)
-    #visualize_data(valid_dataset, num_images=5)
+    # Create the model architecture and load the state dict
+    model = TransferLearningResNet(num_classes=4)  # Use the correct architecture that was used during training
+    model.load_state_dict(torch.load("resnet_model.pth"))  # Load the state dict (weights)
+    model.to(device)  # Move model to GPU if available
+
+    # Evaluate the model and display confusion matrix
+    class_names = valid_dataset.classes  # Get the class names
+    evaluate_model(model, valid_loader, class_names)
 
 if __name__ == "__main__":
     main()

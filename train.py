@@ -1,16 +1,11 @@
-# Thanks to Tim Dangeon on Kaggle --> https://www.kaggle.com/datasets/masoudnickparvar/brain-tumor-mri-dataset/discussion/482896 for the remove duplicate images code.
-
 from utils import load_data
 from sklearn.utils.class_weight import compute_class_weight
-from models import CNNClassifier, save_model, TransferLearningResNet, TransferLearningXception
+from models import save_model, TransferLearningResNet
 import torch
 from torch.utils.data import DataLoader
 import matplotlib.pyplot as plt
 from tqdm import tqdm  # For live progress updates
-from torch.optim.lr_scheduler import ReduceLROnPlateau
 import numpy as np
-import hashlib
-import os
 
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 print(f"Using device: {device}")
@@ -86,7 +81,6 @@ def train(args):
     loss_fn = torch.nn.CrossEntropyLoss(weight=class_weights)
 
     # Learning rate scheduler (reduce LR when validation loss plateaus)
-    #scheduler = ReduceLROnPlateau(optimizer, mode='min', patience=3, factor=0.1, verbose=True)
     scheduler = torch.optim.lr_scheduler.StepLR(optimizer, step_size=10, gamma=0.1)
 
     # Early stopping to prevent overfitting

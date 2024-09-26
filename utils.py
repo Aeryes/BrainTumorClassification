@@ -1,8 +1,7 @@
 
 from PIL import Image
 import os
-from torch.utils.data import Dataset, DataLoader
-from torchvision import transforms
+from torch.utils.data import Dataset
 
 LABEL_NAMES = ['glioma', 'meningioma', 'notumor', 'pituitary']
 
