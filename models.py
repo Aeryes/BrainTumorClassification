@@ -55,15 +55,16 @@ class CNNClassifier(nn.Module):
 class TransferLearningResNet(nn.Module):
     def __init__(self, num_classes=4, dropout_rate_1=0.3, dropout_rate_2=0.25):
         super(TransferLearningResNet, self).__init__()
-        self.resnet = models.resnet18(pretrained=True)
+        self.resnet = models.resnet50(pretrained=True)
+        #self.resnet = timm.create_model('resnet50d', pretrained=True)
 
         # Freeze all layers except the last block (layer4)
         for param in self.resnet.parameters():
             param.requires_grad = False  # Freeze all layers
 
         # Unfreeze layer3 for fine-tuning
-        for param in self.resnet.layer3.parameters():
-            param.requires_grad = True
+        #for param in self.resnet.layer3.parameters():
+        #    param.requires_grad = True
 
         # Unfreeze layer4 for fine-tuning
         for param in self.resnet.layer4.parameters():
@@ -71,13 +72,13 @@ class TransferLearningResNet(nn.Module):
 
         # Modify the final fully connected layers
         self.resnet.fc = nn.Sequential(
-            nn.Flatten(),  # Flatten the output of the convolutional layers
-            nn.Dropout(dropout_rate_1),  # First dropout layer
-            nn.Linear(self.resnet.fc.in_features, 128),  # Dense layer with 128 units
+            #nn.Flatten(),  # Flatten the output of the convolutional layers
+            #nn.Dropout(dropout_rate_1),  # First dropout layer
+            nn.Linear(self.resnet.fc.in_features, 256),  # Dense layer with 128 units
             nn.ReLU(),  # ReLU activation
             nn.Dropout(dropout_rate_2),  # Second dropout layer
-            nn.Linear(128, num_classes),  # Final dense layer with output matching number of classes
-            nn.Softmax(dim=1)  # Softmax activation for multi-class classification
+            nn.Linear(256, num_classes),  # Final dense layer with output matching number of classes
+            #nn.Softmax(dim=1)  # Softmax activation for multi-class classification
         )
 
     def forward(self, x):
@@ -85,19 +86,19 @@ class TransferLearningResNet(nn.Module):
 
 
 class TransferLearningXception(nn.Module):
-    def __init__(self, num_classes=4, img_size=299, dropout_rate_1=0.3, dropout_rate_2=0.25):
+    def __init__(self, num_classes=4, img_size=299, dropout_rate_1=0.3, dropout_rate_2=0.5):
         super(TransferLearningXception, self).__init__()
 
         # Load the pre-trained Xception model from timm, exclude the top classification layer
-        self.base_model = timm.create_model('xception', pretrained=True, num_classes=0, global_pool='max')
+        self.base_model = timm.create_model('legacy_xception', pretrained=True, num_classes=0, global_pool='max')
 
         # Add additional layers (like dropout and fully connected layers)
         self.fc_layers = nn.Sequential(
-            nn.Dropout(dropout_rate_1),  # First dropout layer
-            nn.Linear(self.base_model.num_features, 128),  # Dense layer with 128 units
+            #nn.Dropout(dropout_rate_1),  # First dropout layer
+            nn.Linear(self.base_model.num_features, 256),  # Dense layer with 128 units
             nn.ReLU(),  # ReLU activation
             nn.Dropout(dropout_rate_2),  # Second dropout layer
-            nn.Linear(128, num_classes),  # Final dense layer for classification
+            nn.Linear(256, num_classes),  # Final dense layer for classification
             nn.Softmax(dim=1)  # Softmax for multi-class classification
         )
 

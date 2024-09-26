@@ -1,3 +1,5 @@
+# Thanks to Tim Dangeon on Kaggle --> https://www.kaggle.com/datasets/masoudnickparvar/brain-tumor-mri-dataset/discussion/482896 for the remove duplicate images code.
+
 from utils import load_data
 from sklearn.utils.class_weight import compute_class_weight
 from models import CNNClassifier, save_model, TransferLearningResNet, TransferLearningXception
@@ -7,6 +9,8 @@ import matplotlib.pyplot as plt
 from tqdm import tqdm  # For live progress updates
 from torch.optim.lr_scheduler import ReduceLROnPlateau
 import numpy as np
+import hashlib
+import os
 
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 print(f"Using device: {device}")
@@ -31,22 +35,27 @@ class EarlyStopping:
             self.best_loss = val_loss
             self.counter = 0
 
+
 def train(args):
-    model = TransferLearningXception(num_classes=4, dropout_rate_1=0.3, dropout_rate_2=0.25)
+    model = TransferLearningResNet(num_classes=4, dropout_rate_1=0.5, dropout_rate_2=0.5)
     model.to(device)
 
     # Define transforms for data augmentation and normalization
     from torchvision import transforms
     train_transforms = transforms.Compose([
-        transforms.Resize((299, 299)),
+        transforms.Resize((224, 224)),
+        transforms.RandomHorizontalFlip(),
+        transforms.RandomRotation(10),
+        transforms.ColorJitter(brightness=0.2, contrast=0.2, saturation=0.2, hue=0.2),
+        transforms.RandomAffine(degrees=0, shear=10),
         transforms.ToTensor(),
-        transforms.Normalize(mean=[0.5, 0.5, 0.5], std=[0.5, 0.5, 0.5])
+        transforms.Normalize([0.485, 0.456, 0.406], [0.229, 0.224, 0.225])
     ])
 
     valid_transforms = transforms.Compose([
-        transforms.Resize((299, 299)),
+        transforms.Resize((224, 224)),
         transforms.ToTensor(),
-        transforms.Normalize(mean=[0.5, 0.5, 0.5], std=[0.5, 0.5, 0.5])
+        transforms.Normalize([0.485, 0.456, 0.406], [0.229, 0.224, 0.225])
     ])
 
     # Load the train and validation data.
@@ -68,18 +77,20 @@ def train(args):
 
     # Optimizer: fine-tune the final layer and layer4
     optimizer = torch.optim.Adam([
-        {'params': model.fc_layers.parameters(), 'lr': 0.001},  # Fully connected layers
-        {'params': model.base_model.parameters(), 'lr': 0.0001}  # Fine-tune the base Xception layers
+        #{'params': model.resnet.layer3.parameters(), 'lr': 1e-5}, # layer3
+        {'params': model.resnet.layer4.parameters(), 'lr': 1e-5},  # layer4
+        {'params': model.resnet.fc.parameters(), 'lr': 1e-4}  # layer4
     ], weight_decay=1e-4)
 
     # Use class weights in the loss function
     loss_fn = torch.nn.CrossEntropyLoss(weight=class_weights)
 
     # Learning rate scheduler (reduce LR when validation loss plateaus)
-    scheduler = ReduceLROnPlateau(optimizer, mode='min', patience=3, factor=0.1, verbose=True)
+    #scheduler = ReduceLROnPlateau(optimizer, mode='min', patience=3, factor=0.1, verbose=True)
+    scheduler = torch.optim.lr_scheduler.StepLR(optimizer, step_size=10, gamma=0.1)
 
     # Early stopping to prevent overfitting
-    early_stopping = EarlyStopping(patience=3, min_delta=0.001)
+    #early_stopping = EarlyStopping(patience=2, min_delta=0.001)
 
     # Lists for storing metrics
     train_losses, valid_losses = [], []
@@ -90,7 +101,7 @@ def train(args):
     fig, (ax1, ax2) = plt.subplots(1, 2, figsize=(12, 5))
 
     # Training loop
-    for epoch in range(100):
+    for epoch in range(16):
         # Train the model
         model.train()
         running_train_loss = 0.0
@@ -149,10 +160,10 @@ def train(args):
         scheduler.step(avg_valid_loss)
 
         # Early stopping check
-        early_stopping(avg_valid_loss)
-        if early_stopping.early_stop:
-            print("Early stopping triggered.")
-            break
+        #early_stopping(avg_valid_loss)
+        #if early_stopping.early_stop:
+        #    print("Early stopping triggered.")
+        #    break
 
         # Live update of the graph
         ax1.clear()

@@ -4,7 +4,7 @@ import os
 from torch.utils.data import Dataset, DataLoader
 from torchvision import transforms
 
-LABEL_NAMES = ['glioma_tumor', 'meningioma_tumor', 'no_tumor', 'pituitary_tumor']
+LABEL_NAMES = ['glioma', 'meningioma', 'notumor', 'pituitary']
 
 class BrainTumorDataset(Dataset):
     def __init__(self, dataset_path, transform=None):
