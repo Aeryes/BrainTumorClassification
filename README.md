@@ -43,6 +43,8 @@ Use the following:
 
 ```git clone https://github.com/Aeryes/BrainTumorClassification.git```
 
+Run ```pip install -r requirements.txt```
+
 Place your new images in the data/New folder.
 
 Run ```python predict.py```
