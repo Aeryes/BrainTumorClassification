@@ -13,7 +13,7 @@ augmentations.
 I added in a scheduler to adjust the learning rate as training progressed which helped the model generalize better. Early stopping is also in the scripts
 but was not needed due to the small epoch number required to reach a good end result.
 
-I also performed some visualizations of the data to see what I was working with before training and to test my ideas for dataaugmentation.
+I also performed some visualizations of the data to see what I was working with before training and to test my ideas for data augmentation.
 
 ### Here are 5 samples of the training data with no data augmentation:
 ![alt text](/images/train_data_no_transforms.png "Traning Data No Transforms")
