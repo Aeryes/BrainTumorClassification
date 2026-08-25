@@ -1,1 +1,16 @@
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+.coverage
+build/
+dist/
+*.egg-info/
+.venv/
+venv/
+artifacts/
 data/
+!data/.gitkeep
+*.pth
+.idea/

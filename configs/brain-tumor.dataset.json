@@ -1,0 +1,1069 @@
+{
+  "manifest_version": 1,
+  "dataset_slug": "prathamgrover/brain-tumor-classification",
+  "seed": 42,
+  "train": {
+    "root": "data\\Training",
+    "total_images": 2870,
+    "class_counts": {
+      "glioma": 826,
+      "meningioma": 822,
+      "notumor": 395,
+      "pituitary": 827
+    }
+  },
+  "test": {
+    "root": "data\\Testing",
+    "total_images": 394,
+    "class_counts": {
+      "glioma": 100,
+      "meningioma": 115,
+      "notumor": 105,
+      "pituitary": 74
+    }
+  },
+  "duplicates": {
+    "duplicate_group_count": 166,
+    "cross_split_group_count": 64,
+    "duplicate_groups": {
+      "9c6957b8bfd19b01b5374ea31db6415b5edd882e4bb05f7cee6a5b9ef341303a": [
+        "Training/gg (104).jpg",
+        "Training/gg (86).jpg"
+      ],
+      "df9a0d1f729e066a54d5651d32f90476f04b2acff7641a077c3326d7b630af8f": [
+        "Training/gg (126).jpg",
+        "Training/gg (2).jpg"
+      ],
+      "06b687b21759acb1b6be50d15a9014e35b86736e4ac81aec164d086bd3ccd401": [
+        "Training/gg (162).jpg",
+        "Training/gg (184).jpg"
+      ],
+      "18a7abdb3b9aaa94fa5b869c3c5f607e374209812c759b255fe3c0c8d2ba6981": [
+        "Training/gg (271).jpg",
+        "Training/gg (272).jpg"
+      ],
+      "6d9a007ea17ea24d4457d7fd61e055e6297df8a1e5453593fd1a3f40ada462e9": [
+        "Training/gg (289).jpg",
+        "Training/gg (294).jpg"
+      ],
+      "1b1df8c2b4e4eced7e40cf9d04dde675e894072b17d49ecb1f59b773a91276e3": [
+        "Training/gg (335).jpg",
+        "Training/gg (336).jpg"
+      ],
+      "192cb19f45e0c2f320174ae32077f828514d07d101a3042b1064776e6bc28cd6": [
+        "Training/gg (629).jpg",
+        "Training/gg (649).jpg"
+      ],
+      "d26ec4b155344b81697a2e3c09abb61d565af48304a866a7f5f70eaf3a3928ad": [
+        "Training/gg (762).jpg",
+        "Training/gg (763).jpg"
+      ],
+      "960155b05ea8f0ddcbcd3a5e29905c2a4b55832f03e5b7d6491c73955960d278": [
+        "Training/m (182).jpg",
+        "Training/m (183).jpg"
+      ],
+      "4951f7ba2e002020c835b3f50136c3249f3ae004624b35a262e65dd431d70e56": [
+        "Training/m1(100).jpg",
+        "Training/m1(200).jpg"
+      ],
+      "24f09f91af40e42f2798bbc29df353ce17e6a0c0b533fb923b2fa8f75df6b496": [
+        "Training/m1(101).jpg",
+        "Training/m1(134).jpg",
+        "Training/m1(98).jpg"
+      ],
+      "09b9031e30e757eb6e648686f0ca412357e86895ebbc52d300d2d0a9305fd417": [
+        "Training/m1(15).jpg",
+        "Training/m1(16).jpg"
+      ],
+      "e2c7bc9c2d735e5b584b329f5cda1aec1f2415b2972c4aa8efc8d0a61e61b280": [
+        "Training/m1(170).jpg",
+        "Training/m1(172).jpg"
+      ],
+      "f3d00bbb942117c2fb62466414d3c466ca283b678200fe87424e4128b80b2dba": [
+        "Training/m1(2).jpg",
+        "Training/m1(202).jpg"
+      ],
+      "451f339dbf4d33864e0dd8940f533bbeddda6492cf60bb15615342bd467cc721": [
+        "Training/m3 (164).jpg",
+        "Training/m3 (165).jpg"
+      ],
+      "5a66211168e2f92209f3aee80fe618a1555144bada16fdc2035d1780321c02cf": [
+        "Training/6.jpg",
+        "Training/image (31).jpg"
+      ],
+      "c1bf41ddb56396fd0e74b2eb7212c96a6a915ee86737c060c9db8e1439ff0390": [
+        "Training/image (13).jpg",
+        "Training/image (14).jpg",
+        "Training/image (26).jpg"
+      ],
+      "dc811fda9f7bc3506f21d4094da84c5e3a81d3878b28967b830536fda342a33e": [
+        "Training/image (15).jpg",
+        "Training/image (16).jpg"
+      ],
+      "f2d9f0979df98ce2e4aab669d3c141ca02ebce9eb15775267bfd6d4eae2a7d7f": [
+        "Training/image(1).jpg",
+        "Training/image(48).jpg",
+        "Testing/image(25).jpg",
+        "Testing/image(73).jpg"
+      ],
+      "06e6f334b7e990bd685265cea5af2b11410235f4a3baad476c964249310330f3": [
+        "Training/image(10).jpg",
+        "Testing/image(35).jpg"
+      ],
+      "6f3bdbdba45d1f985b33e51c93c318e0f04f2c3186dfae874050a99a11b1af02": [
+        "Training/image(101).jpg",
+        "Training/image(106).jpg"
+      ],
+      "29f5011764730ed401f04b4978195c0b9fcedb005c3408f89a7586259cb1b675": [
+        "Training/image(102).jpg",
+        "Training/image(107).jpg"
+      ],
+      "23794834130a37699051efa29c29b9af12ae94b6a65d3957d7f9ad667f9bdf0f": [
+        "Training/image(103).jpg",
+        "Training/image(108).jpg"
+      ],
+      "f3ce33b26a3784299fc2bc72215752b531bb1ff11e9b65dc39376039f8809f64": [
+        "Training/image(105).jpg",
+        "Training/image(110).jpg"
+      ],
+      "08c04f3659f54e170fe84f98a8ed10a235809251d6ba7c5372f08c90421ce51e": [
+        "Training/image(11).jpg",
+        "Testing/image(36).jpg"
+      ],
+      "19d1e5fece32f25cffe40d78ee005f41ff3c2598c7765ed122ffb29518274326": [
+        "Training/image(12).jpg",
+        "Training/image(54).jpg",
+        "Testing/image(37).jpg",
+        "Testing/image(79).jpg"
+      ],
+      "f9ab73351fe5dd8b0cac9d28282c9faff3f83bb3aad1a4fb2769c6e94cb25eb4": [
+        "Training/image(127).jpg",
+        "Training/image(200).jpg"
+      ],
+      "5dc458fca643f408eb0da30575e47f363f70ce78a3a14f1b8452139696512b00": [
+        "Training/image(13).jpg",
+        "Testing/image(38).jpg"
+      ],
+      "43c7fb765b0d878dca03cd26cb414b56a2e3280ce2510f3a84dac11003bbd0a0": [
+        "Training/image(138).jpg",
+        "Training/image(181).jpg"
+      ],
+      "220816d55783431f776d10ccd11ebda7aa823602de035f0f07d0d7cd780cfa0f": [
+        "Training/image(14).jpg",
+        "Testing/image(39).jpg"
+      ],
+      "8c7a08207a2f8e5bf03ed590b3a482491a6abeb9b233a40604f3422065424112": [
+        "Training/image(142).jpg",
+        "Training/image(155).jpg",
+        "Training/image(157).jpg"
+      ],
+      "2ed15a662d8dcdf6077f3bf8bb4d21722e2a3b90ff2cf194db18b75933a4d322": [
+        "Training/image(143).jpg",
+        "Training/image(156).jpg",
+        "Training/image(73).jpg",
+        "Training/image(76).jpg"
+      ],
+      "1e1a27e88f2812b4b950fca09bf5f4b8fe20514826756ac69b37b43c0c73214b": [
+        "Training/image(144).jpg",
+        "Training/image(149).jpg",
+        "Training/image(160).jpg"
+      ],
+      "413708f4f5a9e003997c5c966035431a1bd741b16cde99a42ca6155cccf8f17d": [
+        "Training/image(145).jpg",
+        "Training/image(148).jpg"
+      ],
+      "25dbc9664f03a7af82b74aec6c5497cd94dc5f6f639907656725d0ac88cfd111": [
+        "Training/image(146).jpg",
+        "Training/image(150).jpg",
+        "Training/image(72).jpg",
+        "Training/image(75).jpg"
+      ],
+      "df46c96890474f2ec5f08aa2c32e6bc1c6b5685f8b913501f954a515a6de02fa": [
+        "Training/image(15).jpg",
+        "Testing/image(40).jpg"
+      ],
+      "25c13de1f058a3b2d081828fab9a6589ac1feba9a0c3963e8033115e3b9bc2ee": [
+        "Training/image(153).jpg",
+        "Training/image(161).jpg"
+      ],
+      "9a1a7d12c935c0029511710dba377c2d37ecf4924ec19c1644b6116b48c33610": [
+        "Training/image(158).jpg",
+        "Training/image(77).jpg"
+      ],
+      "6e643c3263775b4637ad4e11620277c6ac65dcf63996826f76cac2dac5d8afdc": [
+        "Training/image(16).jpg",
+        "Training/image(27).jpg",
+        "Testing/image(41).jpg",
+        "Testing/image(52).jpg"
+      ],
+      "e9a63334af63a2ec8cab2149ec091466c60df5fe115cf36cc30c9304dacbb376": [
+        "Training/image(164).jpg",
+        "Training/image(239).jpg"
+      ],
+      "ac76ca3b933520e9519c3fa096e38e281e467ae4bda0412daa34cb966954ff68": [
+        "Training/image(166).jpg",
+        "Training/image(167).jpg",
+        "Training/image(172).jpg"
+      ],
+      "280d387f9ef5c5407c3a5618fc7e3a861fed385c6f4c2e11e1ee9b13a7faa102": [
+        "Training/image(168).jpg",
+        "Training/image(302).jpg"
+      ],
+      "17bd1588f84aafbccb846c974ae1f24cef5ce6f0fc0f32a4417af50bfe9f52cd": [
+        "Training/image(169).jpg",
+        "Training/image(201).jpg"
+      ],
+      "6df56cc8a677bbc089ccb7f85e5f40b665a551aa28c7f2fffffcaddf521ed503": [
+        "Training/image(17).jpg",
+        "Testing/image(42).jpg"
+      ],
+      "5b32b70fee5498a7e242f40fd975486691a248ef53c7657ac4c5831133ade0fb": [
+        "Training/image(171).jpg",
+        "Training/image(238).jpg",
+        "Training/image(292).jpg",
+        "Training/image(53).jpg",
+        "Testing/image(78).jpg"
+      ],
+      "2ad6ffff97ce8cbfd5d4785955ea16a6ccf7090eb67a8015e47cd8902571b827": [
+        "Training/image(173).jpg",
+        "Training/image(186).jpg",
+        "Training/image(256).jpg"
+      ],
+      "5f51fecec97f1264f4cb6a9f7d0d847f17e49033ec034b11d2cc5c8b79ba6519": [
+        "Training/image(177).jpg",
+        "Training/image(251).jpg"
+      ],
+      "7703b9670ac9265886cbf62735e2ff074c1507a654573807d0a8468a54c89dd7": [
+        "Training/image(18).jpg",
+        "Testing/image(43).jpg"
+      ],
+      "9251febacd510bc6ab8fdebb28ac58c8db217df4d5e8af285a99547b2d3b8584": [
+        "Training/image(19).jpg",
+        "Testing/image(44).jpg"
+      ],
+      "ca0417b4c4dc6ac92ebdeeb71231b1a60a16299d04b7735c1bf725aa0649d8c2": [
+        "Training/image(195).jpg",
+        "Training/image(208).jpg"
+      ],
+      "c6b37dbcc8c59a18f68c4ecde7f081eb0caa8cae6edb6d438e11170f0736bf01": [
+        "Training/image(2).jpg",
+        "Testing/image(26).jpg"
+      ],
+      "d07ac7d4c62a45c3ca88e4b57cf485acd22b5d5f5e519110f769eb0cd9169d47": [
+        "Training/image(20).jpg",
+        "Training/image(30).jpg",
+        "Training/image(35).jpg",
+        "Testing/image(16).jpg",
+        "Testing/image(45).jpg",
+        "Testing/image(55).jpg",
+        "Testing/image(60).jpg"
+      ],
+      "840e12a9d0fc509d61fab11db74d1716234312bd96939b632e19b8f102ace3cf": [
+        "Training/image(204).jpg",
+        "Training/image(206).jpg"
+      ],
+      "733e77e4b6da2d851bddbf9cf2768c02db39d5fa0f7be61fdbcb9d1e044abb76": [
+        "Training/image(21).jpg",
+        "Training/image(25).jpg",
+        "Training/image(29).jpg",
+        "Testing/image(46).jpg",
+        "Testing/image(50).jpg",
+        "Testing/image(54).jpg"
+      ],
+      "cc336bb30a64c66a0897e048331ca9818b553b8d0c313ed4980971c5b8ea1b46": [
+        "Training/image(211).jpg",
+        "Training/image(235).jpg"
+      ],
+      "270d8daa78d030858d13b95aad0f59bf3cd78b17a6ab1604e0118342676de60f": [
+        "Training/image(212).jpg",
+        "Training/image(218).jpg"
+      ],
+      "fd701e8cdd7a47b2b7198334e09d7947edf3d2efdd68b73b8d47282256f9f475": [
+        "Training/image(213).jpg",
+        "Training/image(244).jpg"
+      ],
+      "20b0c7de1c131e75deff54e8f0c51eef6c48116cdcbf7bb1f47fc7e4c7f07ab1": [
+        "Training/image(215).jpg",
+        "Training/image(287).jpg"
+      ],
+      "2c6470345e908770e6f61b6a2e55cc80288f8598149e3b4558a1d79dfdba6c4a": [
+        "Training/image(22).jpg",
+        "Testing/image(47).jpg"
+      ],
+      "c3f2d52e1a996bea716774c0051492202d3bdf76fdb53f9ade2b5c6289a6cb36": [
+        "Training/image(23).jpg",
+        "Training/image(50).jpg",
+        "Testing/image(48).jpg",
+        "Testing/image(75).jpg"
+      ],
+      "136e27954eca1b7b887f3700f412b2c531153938a0d721d1557a94c3362497c2": [
+        "Training/image(24).jpg",
+        "Training/image(28).jpg",
+        "Training/image(42).jpg",
+        "Training/image(59).jpg",
+        "Testing/image(15).jpg",
+        "Testing/image(49).jpg",
+        "Testing/image(53).jpg",
+        "Testing/image(67).jpg",
+        "Testing/image(84).jpg"
+      ],
+      "72f5f6723c7b92f641fb5d44513b6111c348e43005f8c1f4829f28eebd1117b2": [
+        "Training/image(246).jpg",
+        "Training/image(306).jpg"
+      ],
+      "2779f5d9e97ff8a2283e34ab88a7e6de22c561367944758e2796f427fd2dddd9": [
+        "Training/image(249).jpg",
+        "Training/image(253).jpg"
+      ],
+      "ca5a51914cad005d72af57fa6c9142fc9d650ca06ba23f3e839991c3fa4c8b36": [
+        "Training/image(252).jpg",
+        "Training/image(279).jpg"
+      ],
+      "dfbba0fc3e25b2cc10d6fde8faf975c6f475baa770ede5ea3fd1e495995736ef": [
+        "Training/image(26).jpg",
+        "Testing/image(51).jpg"
+      ],
+      "53765f8fc313f7684b0df4547a89e27ecae20ae66c60ee26318fc9f1a301de8d": [
+        "Training/image(262).jpg",
+        "Testing/image(97).jpg"
+      ],
+      "c515996f4519dbd88019480d9e6442c71bc2513a7e2cb35a776b56af27b1021a": [
+        "Training/image(264).jpg",
+        "Testing/image(98).jpg"
+      ],
+      "039d0eb6b8493db695929536aa7476f8c472381a7c20de981bfe7e0bdd875a82": [
+        "Training/image(266).jpg",
+        "Testing/image(100).jpg"
+      ],
+      "e834d68ccf89fc7d5f8a93f0718fb614dd3591102ee4ed5c5d851ac43dbd9e1c": [
+        "Training/image(268).jpg",
+        "Testing/image(102).jpg"
+      ],
+      "d8ea17fdb98908199591b41310c56ae6a2b90408287403a45333653e079944b1": [
+        "Training/image(270).jpg",
+        "Testing/image(103).jpg"
+      ],
+      "49d44a7fd256a35903b981a4c7fbd2c3adc0f87f24ed0cf34d83a91aa13441b0": [
+        "Training/image(272).jpg",
+        "Testing/image(104).jpg"
+      ],
+      "e3ea07d69e4b3242a2bc56046a2c9547c6e15d8169d3bdad7d4f8f9baf2a2442": [
+        "Training/image(276).jpg",
+        "Training/image(281).jpg"
+      ],
+      "1fe1db4adc37442001e9e054e3a990efa31b7db7cdb0a3d2711afbf346f9094b": [
+        "Training/image(3).jpg",
+        "Testing/image(27).jpg"
+      ],
+      "c4c847d6e586faffcadf669ff0a9a608542741edc3a387040c059df1bb7052bb": [
+        "Training/image(31).jpg",
+        "Testing/image(56).jpg"
+      ],
+      "1d489fd63322dff8146dfb442c512362d2d42d5f4e44b90414202ac0abe5f97e": [
+        "Training/image(32).jpg",
+        "Testing/image(57).jpg"
+      ],
+      "affc1b4d529e3c1f06052e6fe5d27ef659071f0c1b14b4197c6d2c4f30ae93bb": [
+        "Training/image(325).jpg",
+        "Testing/image(99).jpg"
+      ],
+      "f1aa73c33c56a13b8fe3b256ba2e6e3d2d84ddc6f3ed814d874bc88726ac1f9d": [
+        "Training/image(326).jpg",
+        "Testing/image(101).jpg"
+      ],
+      "247420d663a2af95266ddfb5c9cd2ee741d2474f300ca0d25809d37f61e9c4df": [
+        "Training/image(33).jpg",
+        "Testing/image(58).jpg"
+      ],
+      "e34e448b7509d16d43c6a6505995cdbb7bf6b2ad29ee09a37ec740c8494f74e3": [
+        "Training/image(34).jpg",
+        "Testing/image(59).jpg"
+      ],
+      "7b73d6019deb1482bc5fb7027f12719bea983c8eb0b0c0f3e95feb61c90fafb3": [
+        "Training/image(36).jpg",
+        "Training/image(46).jpg",
+        "Testing/image(22).jpg",
+        "Testing/image(61).jpg",
+        "Testing/image(71).jpg"
+      ],
+      "a8155f8b8f640f8464b58a380026d01471800d15e76cbfd9678848d669c7e3a7": [
+        "Training/image(37).jpg",
+        "Testing/image(62).jpg"
+      ],
+      "18cfaf6cee35ef130675d36429a4d0d9d944cef9942c203b01975b7130ff6df5": [
+        "Training/image(38).jpg",
+        "Testing/image(63).jpg"
+      ],
+      "76a70a3f68103e335f080a323d763fbda5febc37e4714c2f9b54499795f13fa3": [
+        "Training/image(39).jpg",
+        "Training/image(7).jpg",
+        "Testing/image(32).jpg",
+        "Testing/image(64).jpg"
+      ],
+      "053a6036a57e58922ce011f713ddb44f78af390306aa055803e24338eb977075": [
+        "Training/image(4).jpg",
+        "Testing/image(28).jpg"
+      ],
+      "16bdc3ca286cca1bb4761deeca41c63f5626ac65aff85231686caf5c3897c210": [
+        "Training/image(40).jpg",
+        "Testing/image(65).jpg"
+      ],
+      "9af05acd768793e89fc6776c3af838b0bf0747cfc3a3737e1cd3af44ea09c930": [
+        "Training/image(41).jpg",
+        "Training/image(56).jpg",
+        "Training/image(8).jpg",
+        "Testing/image(10).jpg",
+        "Testing/image(33).jpg",
+        "Testing/image(66).jpg",
+        "Testing/image(81).jpg"
+      ],
+      "94721a1b47a80cb0533acdbac52f92ad7614d4685284b74b2a96914b038947a9": [
+        "Training/image(43).jpg",
+        "Testing/image(31).jpg",
+        "Testing/image(68).jpg"
+      ],
+      "4f3c00ef520660295576c472a0cafc9f1bb400d736b352b736966af08bf09235": [
+        "Training/image(44).jpg",
+        "Testing/image(21).jpg",
+        "Testing/image(69).jpg"
+      ],
+      "9d338079dd3288665657816ebeec6ada298761e0ff9f4c22a59f05c46768db14": [
+        "Training/image(45).jpg",
+        "Training/image.jpg",
+        "Testing/image(24).jpg",
+        "Testing/image(70).jpg"
+      ],
+      "812a2c6599255067e9752c7d0037f409d91f7336f42d7af3440fb5c2c91e8da1": [
+        "Training/image(47).jpg",
+        "Testing/image(72).jpg"
+      ],
+      "c6d35e130bc719af5e19824979ce640e835635fc495a7383435df8b9aa16b023": [
+        "Training/image(49).jpg",
+        "Testing/image(74).jpg"
+      ],
+      "9c3b00e6b1f5fcb23d3ebf1a8b04f9517691cc7b7e2cfdbde375625c920b97a6": [
+        "Training/image(5).jpg",
+        "Testing/image(29).jpg"
+      ],
+      "eed488f2e399ac4a011a52b70eff0a73837f1f2b8ef02297841792ba819420bc": [
+        "Training/image(51).jpg",
+        "Testing/image(76).jpg"
+      ],
+      "4c6238dc9771a99b1623932047fd64d5eb26d25cc294916c516b85e261c8ab46": [
+        "Training/image(52).jpg",
+        "Testing/image(77).jpg"
+      ],
+      "a8d8bd68e37588a5be079ea92de410d9097988aea40552f6fd08ca44a7dd6c74": [
+        "Training/image(55).jpg",
+        "Testing/image(80).jpg",
+        "Testing/image(9).jpg"
+      ],
+      "cae1e3ac8a29d55a9f7c0638c1d26be1d91a18c26715459dfcfa56a26317c11b": [
+        "Training/image(57).jpg",
+        "Testing/image(82).jpg"
+      ],
+      "ff1df5849a35548de3ed553bc8c927511045cce13c42a2159c62f546c52230c9": [
+        "Training/image(58).jpg",
+        "Testing/image(83).jpg"
+      ],
+      "f3bbcbc551b2533f763091b8d11957d40118b57fe937c3b940f3f8b26098030f": [
+        "Training/image(6).jpg",
+        "Testing/image(30).jpg"
+      ],
+      "41d847d03ff8e8a80fde982029492adf6c622dc7d78fad2db48b14287c552296": [
+        "Training/image(60).jpg",
+        "Testing/image(11).jpg",
+        "Testing/image(85).jpg"
+      ],
+      "d08b052913eb262dfd31fdd6d7ca904c5343087cdc458ca928c9e85bf41bf388": [
+        "Training/image(61).jpg",
+        "Testing/image(86).jpg"
+      ],
+      "2c0036409ce103a8668735db595e18d01fbd821ca66e8ef43c77d6a4add544de": [
+        "Training/image(62).jpg",
+        "Testing/image(87).jpg"
+      ],
+      "77d1374baf9988fd4f9272886783a65820b3afbbbaa773777ed01a4b04ff9d80": [
+        "Training/image(63).jpg",
+        "Testing/image(88).jpg"
+      ],
+      "f0f59157eff868aa8dc74d5a6b5d384421c8587b5f15d90ca8414f4650276436": [
+        "Training/image(64).jpg",
+        "Testing/image(89).jpg"
+      ],
+      "d9f0d5ef8784abb3ac7cadb3e31a9b1ef4879de8edb20a637d66c49f6c8eb60f": [
+        "Training/image(65).jpg",
+        "Testing/image(90).jpg"
+      ],
+      "6d94cb16b0e532e10913e0f7e82bc9f0e2ddc3ff08601f8f7b118b88a137e111": [
+        "Training/image(66).jpg",
+        "Testing/image(91).jpg"
+      ],
+      "ad26946bf8b6ba5be922f24ab271337964fc35675fa4d0398719e33665337ece": [
+        "Training/image(67).jpg",
+        "Testing/image(92).jpg"
+      ],
+      "bf590df79c3f0a0ee28f4c1238720e89f40e4437c827273e3a168708f6fe8476": [
+        "Training/image(68).jpg",
+        "Testing/image(93).jpg"
+      ],
+      "b577189346bc4cc74942150e5875bead25153aa474db97d1882ebf72244de3ec": [
+        "Training/image(69).jpg",
+        "Testing/image(94).jpg"
+      ],
+      "b23fe6dad4ff5e7e0fe80d1d315399658298647951c5f5e148e8c0d6ff6e3b5e": [
+        "Training/image(70).jpg",
+        "Testing/image(95).jpg"
+      ],
+      "c50e621a36b08a9c2f28e239dc00b27ce321bd8ed715a48ced97515e965473d2": [
+        "Training/image(71).jpg",
+        "Testing/image(96).jpg"
+      ],
+      "4f2893125ab87fc6fcd6cd5388db893efeb9a1a30e59f942e7743144766c78f6": [
+        "Training/image(9).jpg",
+        "Testing/image(34).jpg"
+      ],
+      "c27c953b150b8cfa6c2820bac42a13a5d1b5b6420409973ba07a18542429afd5": [
+        "Training/p (140).jpg",
+        "Training/p (240).jpg"
+      ],
+      "dea65808e631f46024aaa034984629ab8a455f2b951ca7022f12fa9e62b7c8ff": [
+        "Training/p (196).jpg",
+        "Training/p (197).jpg"
+      ],
+      "6c374ab41105e5927d08e15103c8c27416f8e7d03c15c03d104ace5b310bd0ed": [
+        "Training/p (242).jpg",
+        "Training/p (243).jpg"
+      ],
+      "8a4a14e666a67b90bf01bac1b85170bacf41fda33c7a7394d5e82e83c6f6f324": [
+        "Training/p (251).jpg",
+        "Training/p (252).jpg"
+      ],
+      "a1ee82164acd190067400d50f236fbb6004c0002fe3c09e4cf2d71752865140b": [
+        "Training/p (302).jpg",
+        "Training/p (303).jpg"
+      ],
+      "8e2b4a6d3ce98d740a636942e40c14783eac078cf1758678c9d5aee948057aa7": [
+        "Training/p (388).jpg",
+        "Training/p (389).jpg"
+      ],
+      "8afa71fed3d0307237b24872056b750f3c06ee0d9527c35241b908eb7404080f": [
+        "Training/p (407).jpg",
+        "Training/p (408).jpg"
+      ],
+      "3e802dd22f483ce4d442fe2c7f1890c1c810ec8c1131b364fd4e4593bf0f268a": [
+        "Training/p (565).jpg",
+        "Training/p (566).jpg",
+        "Training/p (567).jpg",
+        "Training/p (568).jpg"
+      ],
+      "7d0738e4f6493b449e20a147b80f674c589dc478dd6b5ccd4fb6ea1c329f0cfe": [
+        "Training/p (578).jpg",
+        "Training/p (579).jpg",
+        "Training/p (580).jpg"
+      ],
+      "39f4f7b252d7809d8d3d2e4521607de2195bf0f66c0592587b1cebd632aac640": [
+        "Training/p (737).jpg",
+        "Training/p (738).jpg"
+      ],
+      "02799f7863d49de182357e72179f3cc4e65e70099355f2d5aa2e39d356e492d9": [
+        "Training/p (741).jpg",
+        "Training/p (742).jpg"
+      ],
+      "690ed9d73b96706b833cfbb95e40543fe022c7579ab74693873e2c26766c5efb": [
+        "Training/p (751).jpg",
+        "Training/p (752).jpg"
+      ],
+      "b5e17076d1427e41a618f92bc72100c1be4df26608223512aac51c911ac1eb88": [
+        "Training/p (780).jpg",
+        "Training/p (781).jpg"
+      ],
+      "08690b76457b2b44d58682cece62ec951ef6d30d935ce07df852e97d44434680": [
+        "Training/p (825).jpg",
+        "Training/p (826).jpg"
+      ],
+      "37462cc70ce94a639e5f567e7f646471c68c66e685eb9fc000c66c3588def449": [
+        "Testing/image(1).jpg",
+        "Testing/image.jpg"
+      ],
+      "c711a606ec66e74a2bbe5721727a3deeb2fd9e4b20aa50c99afd65d7dea42541": [
+        "Testing/image(11).jpg",
+        "Testing/image(12).jpg",
+        "Testing/image(90).jpg"
+      ],
+      "9240553fcd8fe826ed548984db69d2d0178a14adb7aba345b6e7ba539e15d71f": [
+        "Testing/image(21).jpg",
+        "Testing/image(95).jpg"
+      ],
+      "36d2f03fd5b0ffd8a3ac1d2fe9f2c3cf4967f82751629676198f774e0ee21a9c": [
+        "Testing/image(26).jpg",
+        "Testing/image(97).jpg"
+      ],
+      "cd0ed664951fcfd1ac7657a788f912f298b005d4cd99303da31c8399363c58cc": [
+        "Testing/image(28).jpg",
+        "Testing/image(29).jpg",
+        "Testing/image(79).jpg"
+      ],
+      "9c20281ccdd53888d2ebcecc9c71521ed2431500eb4448e1b63465c050a0e59f": [
+        "Testing/image(3).jpg",
+        "Testing/image(6).jpg"
+      ],
+      "917cadd5aad4a8288a4f759d4f4a261e66c3187dbace1293b76aa8434b691b37": [
+        "Testing/image(30).jpg",
+        "Testing/image(84).jpg"
+      ],
+      "c3e0dfa4276ce9ec6db117fa83397c51ba751c0031b7ee044b682e34b5a82100": [
+        "Testing/image(31).jpg",
+        "Testing/image(46).jpg"
+      ],
+      "8854fba4d018533127553c10ffebacf8d730192cb6f07d957ea5d3fb48421eea": [
+        "Testing/image(50).jpg",
+        "Testing/image(55).jpg"
+      ],
+      "c2bd43b2b8cdb63dc5b6d86fa972dbc4d8395278a5e7fac7f1c972f01921a206": [
+        "Testing/image(64).jpg",
+        "Testing/image(65).jpg"
+      ],
+      "8872585c004347ea73fad063e407998e62786cc8d7a0938ad85792f19a55eb0a": [
+        "Testing/image(70).jpg",
+        "Testing/image(71).jpg"
+      ],
+      "177abe5e79819aaca240e172e350d26a7b6e4d12c1c4c9f5a16c6cbb2e2a650d": [
+        "Testing/image(77).jpg",
+        "Testing/image(80).jpg"
+      ],
+      "04aa41d8514362877d7f8fd81e543bc8584e4a6ba1ac025c2f37515f32abd9b0": [
+        "Testing/image(93).jpg",
+        "Testing/image(94).jpg"
+      ],
+      "75a94d8802948910edc24b520257853ad379e8be91af1393bd6b5092b23e05b1": [
+        "Testing/image(98).jpg",
+        "Testing/image(99).jpg"
+      ],
+      "86847c6a4729a4b19bf1b3f58905c68812c6f75ea680c0ccb1621b94e165d16f": [
+        "Testing/image(118).jpg",
+        "Testing/image(24).jpg"
+      ],
+      "f55311fb8ccf1b86450233262bd00b176bd1c404e5849b59c0a3cd5e4440626b": [
+        "Testing/image(60).jpg",
+        "Testing/image(62).jpg"
+      ],
+      "f9d0258b9e93c970f46574f7f76ac449b80479c91603e7398690689bc63e73b8": [
+        "Testing/image(1).jpg",
+        "Testing/image(2).jpg",
+        "Testing/image(3).jpg"
+      ],
+      "ad94e2ae69c36712cf7ee4f8829c2f5edd598699ee2863985fe6f700817a98ea": [
+        "Testing/image(19).jpg",
+        "Testing/image(20).jpg",
+        "Testing/image(21).jpg"
+      ],
+      "d74ec60be128f9c0af8f0df4288169d205d4bb1930892f8d34d8495e89b3ffad": [
+        "Testing/image(22).jpg",
+        "Testing/image(23).jpg"
+      ],
+      "038cb56df6089d058966e13005993a7a900c70ee13f617c7f4d8dad0ea8e14c4": [
+        "Testing/image(27).jpg",
+        "Testing/image(28).jpg"
+      ],
+      "6e4a32b7a73554a9a26b0e594f63d76920f7caeea52be19c323f8ad755d17f8b": [
+        "Testing/image(35).jpg",
+        "Testing/image(36).jpg",
+        "Testing/image(37).jpg"
+      ],
+      "6c8c2a11f01b532a75a01f052e3f536e10bcdca633e77ef3001d8ed852e83ee7": [
+        "Testing/image(38).jpg",
+        "Testing/image(51).jpg",
+        "Testing/image(52).jpg"
+      ],
+      "dc8ef910fb6a27abfe1862e83beeacb91864e160cd6919e5f0b2ebc039b865c4": [
+        "Testing/image(41).jpg",
+        "Testing/image(42).jpg",
+        "Testing/image(43).jpg"
+      ],
+      "aff49c4e9fbe859bc0608338e96e8e4eab4743e7100c05f81b48e68a799d38d4": [
+        "Testing/image(44).jpg",
+        "Testing/image(45).jpg",
+        "Testing/image(46).jpg"
+      ],
+      "14a873e8998c4a88896fd7be1155eeaf656b88209c8e9fcf7db731de3478484c": [
+        "Testing/image(47).jpg",
+        "Testing/image(48).jpg",
+        "Testing/image(49).jpg"
+      ],
+      "ed53cb5d51e0db7d64d607abe881e84bee22f648bf6b22fbc9b627db896b9524": [
+        "Testing/image(5).jpg",
+        "Testing/image(6).jpg"
+      ],
+      "ac081dc77c62c1902feb757aa652c2af19c67d31ec646fd3f2a50249729f570c": [
+        "Testing/image(53).jpg",
+        "Testing/image(54).jpg",
+        "Testing/image(55).jpg"
+      ],
+      "4f6314d65c3d703caa7b94440365f4c89fa68a7069a0a10054e6604956f60f28": [
+        "Testing/image(56).jpg",
+        "Testing/image(57).jpg"
+      ],
+      "59b7545faed7fe8962c1853d6dd379ab5e5ddfe6970a42a0017a4114fb1a95ad": [
+        "Testing/image(60).jpg",
+        "Testing/image(61).jpg"
+      ],
+      "53446ebefbb558643e11fe7ecf3059737e2814172797c680e50463dd03656fdf": [
+        "Testing/image(63).jpg",
+        "Testing/image(64).jpg"
+      ],
+      "e99074ab025d65cc916b786675d37496c0f045c8267c222bfbc29c04dab42ffd": [
+        "Testing/image(65).jpg",
+        "Testing/image(66).jpg"
+      ],
+      "f764c8846c7fe11dce4e99b2bfa153347eb2976ae53857392f31f82b127b2270": [
+        "Testing/image(67).jpg",
+        "Testing/image(68).jpg"
+      ],
+      "2ff387b9c84bad104f2f095f9832781f634931e584e02a1afab513037079eea5": [
+        "Testing/image(69).jpg",
+        "Testing/image(70).jpg"
+      ],
+      "dcd95c0c2665cd7680ba5d36c4f46df84c24faec7bb5b4bd31d164a04703d9a5": [
+        "Testing/image(7).jpg",
+        "Testing/image(8).jpg"
+      ],
+      "b204aa522460d1a772549e65023ac4f67b3ad1f57a1be54c59ece19fcd2d0081": [
+        "Testing/image(76).jpg",
+        "Testing/image(77).jpg",
+        "Testing/image(78).jpg"
+      ],
+      "1bbe995f377f1eb224e2a963238bbfacf7bf49a3d7219bbc3dd781b5c34e4fb8": [
+        "Testing/image(81).jpg",
+        "Testing/image(82).jpg"
+      ],
+      "93ea61a9b554ed27c76d767221bba1d6c8b24a03521aee53f4b822b89efa41b2": [
+        "Testing/image(85).jpg",
+        "Testing/image(86).jpg",
+        "Testing/image.jpg"
+      ],
+      "f2152513bd2804ec1ef7e8b188ab72a991417708a0b98e3dac3131578d1aa794": [
+        "Testing/image(87).jpg",
+        "Testing/image(88).jpg"
+      ],
+      "8d463bf588c1bc9e685df1729434a541f187054456fe244024966078fe1aef61": [
+        "Testing/image(89).jpg",
+        "Testing/image(90).jpg",
+        "Testing/image(91).jpg"
+      ],
+      "de35915b30be9cb513305bb03b1fcf263dadf7259aa666e02f09215118f7f65a": [
+        "Testing/image(92).jpg",
+        "Testing/image(93).jpg",
+        "Testing/image(96).jpg",
+        "Testing/image(97).jpg"
+      ],
+      "ac76926d9f73fd42c57092e3f991abe3036320552092ebf8d69d60d736a93622": [
+        "Testing/image(94).jpg",
+        "Testing/image(95).jpg"
+      ]
+    },
+    "cross_split_groups": {
+      "f2d9f0979df98ce2e4aab669d3c141ca02ebce9eb15775267bfd6d4eae2a7d7f": [
+        "Training/image(1).jpg",
+        "Training/image(48).jpg",
+        "Testing/image(25).jpg",
+        "Testing/image(73).jpg"
+      ],
+      "06e6f334b7e990bd685265cea5af2b11410235f4a3baad476c964249310330f3": [
+        "Training/image(10).jpg",
+        "Testing/image(35).jpg"
+      ],
+      "08c04f3659f54e170fe84f98a8ed10a235809251d6ba7c5372f08c90421ce51e": [
+        "Training/image(11).jpg",
+        "Testing/image(36).jpg"
+      ],
+      "19d1e5fece32f25cffe40d78ee005f41ff3c2598c7765ed122ffb29518274326": [
+        "Training/image(12).jpg",
+        "Training/image(54).jpg",
+        "Testing/image(37).jpg",
+        "Testing/image(79).jpg"
+      ],
+      "5dc458fca643f408eb0da30575e47f363f70ce78a3a14f1b8452139696512b00": [
+        "Training/image(13).jpg",
+        "Testing/image(38).jpg"
+      ],
+      "220816d55783431f776d10ccd11ebda7aa823602de035f0f07d0d7cd780cfa0f": [
+        "Training/image(14).jpg",
+        "Testing/image(39).jpg"
+      ],
+      "df46c96890474f2ec5f08aa2c32e6bc1c6b5685f8b913501f954a515a6de02fa": [
+        "Training/image(15).jpg",
+        "Testing/image(40).jpg"
+      ],
+      "6e643c3263775b4637ad4e11620277c6ac65dcf63996826f76cac2dac5d8afdc": [
+        "Training/image(16).jpg",
+        "Training/image(27).jpg",
+        "Testing/image(41).jpg",
+        "Testing/image(52).jpg"
+      ],
+      "6df56cc8a677bbc089ccb7f85e5f40b665a551aa28c7f2fffffcaddf521ed503": [
+        "Training/image(17).jpg",
+        "Testing/image(42).jpg"
+      ],
+      "5b32b70fee5498a7e242f40fd975486691a248ef53c7657ac4c5831133ade0fb": [
+        "Training/image(171).jpg",
+        "Training/image(238).jpg",
+        "Training/image(292).jpg",
+        "Training/image(53).jpg",
+        "Testing/image(78).jpg"
+      ],
+      "7703b9670ac9265886cbf62735e2ff074c1507a654573807d0a8468a54c89dd7": [
+        "Training/image(18).jpg",
+        "Testing/image(43).jpg"
+      ],
+      "9251febacd510bc6ab8fdebb28ac58c8db217df4d5e8af285a99547b2d3b8584": [
+        "Training/image(19).jpg",
+        "Testing/image(44).jpg"
+      ],
+      "c6b37dbcc8c59a18f68c4ecde7f081eb0caa8cae6edb6d438e11170f0736bf01": [
+        "Training/image(2).jpg",
+        "Testing/image(26).jpg"
+      ],
+      "d07ac7d4c62a45c3ca88e4b57cf485acd22b5d5f5e519110f769eb0cd9169d47": [
+        "Training/image(20).jpg",
+        "Training/image(30).jpg",
+        "Training/image(35).jpg",
+        "Testing/image(16).jpg",
+        "Testing/image(45).jpg",
+        "Testing/image(55).jpg",
+        "Testing/image(60).jpg"
+      ],
+      "733e77e4b6da2d851bddbf9cf2768c02db39d5fa0f7be61fdbcb9d1e044abb76": [
+        "Training/image(21).jpg",
+        "Training/image(25).jpg",
+        "Training/image(29).jpg",
+        "Testing/image(46).jpg",
+        "Testing/image(50).jpg",
+        "Testing/image(54).jpg"
+      ],
+      "2c6470345e908770e6f61b6a2e55cc80288f8598149e3b4558a1d79dfdba6c4a": [
+        "Training/image(22).jpg",
+        "Testing/image(47).jpg"
+      ],
+      "c3f2d52e1a996bea716774c0051492202d3bdf76fdb53f9ade2b5c6289a6cb36": [
+        "Training/image(23).jpg",
+        "Training/image(50).jpg",
+        "Testing/image(48).jpg",
+        "Testing/image(75).jpg"
+      ],
+      "136e27954eca1b7b887f3700f412b2c531153938a0d721d1557a94c3362497c2": [
+        "Training/image(24).jpg",
+        "Training/image(28).jpg",
+        "Training/image(42).jpg",
+        "Training/image(59).jpg",
+        "Testing/image(15).jpg",
+        "Testing/image(49).jpg",
+        "Testing/image(53).jpg",
+        "Testing/image(67).jpg",
+        "Testing/image(84).jpg"
+      ],
+      "dfbba0fc3e25b2cc10d6fde8faf975c6f475baa770ede5ea3fd1e495995736ef": [
+        "Training/image(26).jpg",
+        "Testing/image(51).jpg"
+      ],
+      "53765f8fc313f7684b0df4547a89e27ecae20ae66c60ee26318fc9f1a301de8d": [
+        "Training/image(262).jpg",
+        "Testing/image(97).jpg"
+      ],
+      "c515996f4519dbd88019480d9e6442c71bc2513a7e2cb35a776b56af27b1021a": [
+        "Training/image(264).jpg",
+        "Testing/image(98).jpg"
+      ],
+      "039d0eb6b8493db695929536aa7476f8c472381a7c20de981bfe7e0bdd875a82": [
+        "Training/image(266).jpg",
+        "Testing/image(100).jpg"
+      ],
+      "e834d68ccf89fc7d5f8a93f0718fb614dd3591102ee4ed5c5d851ac43dbd9e1c": [
+        "Training/image(268).jpg",
+        "Testing/image(102).jpg"
+      ],
+      "d8ea17fdb98908199591b41310c56ae6a2b90408287403a45333653e079944b1": [
+        "Training/image(270).jpg",
+        "Testing/image(103).jpg"
+      ],
+      "49d44a7fd256a35903b981a4c7fbd2c3adc0f87f24ed0cf34d83a91aa13441b0": [
+        "Training/image(272).jpg",
+        "Testing/image(104).jpg"
+      ],
+      "1fe1db4adc37442001e9e054e3a990efa31b7db7cdb0a3d2711afbf346f9094b": [
+        "Training/image(3).jpg",
+        "Testing/image(27).jpg"
+      ],
+      "c4c847d6e586faffcadf669ff0a9a608542741edc3a387040c059df1bb7052bb": [
+        "Training/image(31).jpg",
+        "Testing/image(56).jpg"
+      ],
+      "1d489fd63322dff8146dfb442c512362d2d42d5f4e44b90414202ac0abe5f97e": [
+        "Training/image(32).jpg",
+        "Testing/image(57).jpg"
+      ],
+      "affc1b4d529e3c1f06052e6fe5d27ef659071f0c1b14b4197c6d2c4f30ae93bb": [
+        "Training/image(325).jpg",
+        "Testing/image(99).jpg"
+      ],
+      "f1aa73c33c56a13b8fe3b256ba2e6e3d2d84ddc6f3ed814d874bc88726ac1f9d": [
+        "Training/image(326).jpg",
+        "Testing/image(101).jpg"
+      ],
+      "247420d663a2af95266ddfb5c9cd2ee741d2474f300ca0d25809d37f61e9c4df": [
+        "Training/image(33).jpg",
+        "Testing/image(58).jpg"
+      ],
+      "e34e448b7509d16d43c6a6505995cdbb7bf6b2ad29ee09a37ec740c8494f74e3": [
+        "Training/image(34).jpg",
+        "Testing/image(59).jpg"
+      ],
+      "7b73d6019deb1482bc5fb7027f12719bea983c8eb0b0c0f3e95feb61c90fafb3": [
+        "Training/image(36).jpg",
+        "Training/image(46).jpg",
+        "Testing/image(22).jpg",
+        "Testing/image(61).jpg",
+        "Testing/image(71).jpg"
+      ],
+      "a8155f8b8f640f8464b58a380026d01471800d15e76cbfd9678848d669c7e3a7": [
+        "Training/image(37).jpg",
+        "Testing/image(62).jpg"
+      ],
+      "18cfaf6cee35ef130675d36429a4d0d9d944cef9942c203b01975b7130ff6df5": [
+        "Training/image(38).jpg",
+        "Testing/image(63).jpg"
+      ],
+      "76a70a3f68103e335f080a323d763fbda5febc37e4714c2f9b54499795f13fa3": [
+        "Training/image(39).jpg",
+        "Training/image(7).jpg",
+        "Testing/image(32).jpg",
+        "Testing/image(64).jpg"
+      ],
+      "053a6036a57e58922ce011f713ddb44f78af390306aa055803e24338eb977075": [
+        "Training/image(4).jpg",
+        "Testing/image(28).jpg"
+      ],
+      "16bdc3ca286cca1bb4761deeca41c63f5626ac65aff85231686caf5c3897c210": [
+        "Training/image(40).jpg",
+        "Testing/image(65).jpg"
+      ],
+      "9af05acd768793e89fc6776c3af838b0bf0747cfc3a3737e1cd3af44ea09c930": [
+        "Training/image(41).jpg",
+        "Training/image(56).jpg",
+        "Training/image(8).jpg",
+        "Testing/image(10).jpg",
+        "Testing/image(33).jpg",
+        "Testing/image(66).jpg",
+        "Testing/image(81).jpg"
+      ],
+      "94721a1b47a80cb0533acdbac52f92ad7614d4685284b74b2a96914b038947a9": [
+        "Training/image(43).jpg",
+        "Testing/image(31).jpg",
+        "Testing/image(68).jpg"
+      ],
+      "4f3c00ef520660295576c472a0cafc9f1bb400d736b352b736966af08bf09235": [
+        "Training/image(44).jpg",
+        "Testing/image(21).jpg",
+        "Testing/image(69).jpg"
+      ],
+      "9d338079dd3288665657816ebeec6ada298761e0ff9f4c22a59f05c46768db14": [
+        "Training/image(45).jpg",
+        "Training/image.jpg",
+        "Testing/image(24).jpg",
+        "Testing/image(70).jpg"
+      ],
+      "812a2c6599255067e9752c7d0037f409d91f7336f42d7af3440fb5c2c91e8da1": [
+        "Training/image(47).jpg",
+        "Testing/image(72).jpg"
+      ],
+      "c6d35e130bc719af5e19824979ce640e835635fc495a7383435df8b9aa16b023": [
+        "Training/image(49).jpg",
+        "Testing/image(74).jpg"
+      ],
+      "9c3b00e6b1f5fcb23d3ebf1a8b04f9517691cc7b7e2cfdbde375625c920b97a6": [
+        "Training/image(5).jpg",
+        "Testing/image(29).jpg"
+      ],
+      "eed488f2e399ac4a011a52b70eff0a73837f1f2b8ef02297841792ba819420bc": [
+        "Training/image(51).jpg",
+        "Testing/image(76).jpg"
+      ],
+      "4c6238dc9771a99b1623932047fd64d5eb26d25cc294916c516b85e261c8ab46": [
+        "Training/image(52).jpg",
+        "Testing/image(77).jpg"
+      ],
+      "a8d8bd68e37588a5be079ea92de410d9097988aea40552f6fd08ca44a7dd6c74": [
+        "Training/image(55).jpg",
+        "Testing/image(80).jpg",
+        "Testing/image(9).jpg"
+      ],
+      "cae1e3ac8a29d55a9f7c0638c1d26be1d91a18c26715459dfcfa56a26317c11b": [
+        "Training/image(57).jpg",
+        "Testing/image(82).jpg"
+      ],
+      "ff1df5849a35548de3ed553bc8c927511045cce13c42a2159c62f546c52230c9": [
+        "Training/image(58).jpg",
+        "Testing/image(83).jpg"
+      ],
+      "f3bbcbc551b2533f763091b8d11957d40118b57fe937c3b940f3f8b26098030f": [
+        "Training/image(6).jpg",
+        "Testing/image(30).jpg"
+      ],
+      "41d847d03ff8e8a80fde982029492adf6c622dc7d78fad2db48b14287c552296": [
+        "Training/image(60).jpg",
+        "Testing/image(11).jpg",
+        "Testing/image(85).jpg"
+      ],
+      "d08b052913eb262dfd31fdd6d7ca904c5343087cdc458ca928c9e85bf41bf388": [
+        "Training/image(61).jpg",
+        "Testing/image(86).jpg"
+      ],
+      "2c0036409ce103a8668735db595e18d01fbd821ca66e8ef43c77d6a4add544de": [
+        "Training/image(62).jpg",
+        "Testing/image(87).jpg"
+      ],
+      "77d1374baf9988fd4f9272886783a65820b3afbbbaa773777ed01a4b04ff9d80": [
+        "Training/image(63).jpg",
+        "Testing/image(88).jpg"
+      ],
+      "f0f59157eff868aa8dc74d5a6b5d384421c8587b5f15d90ca8414f4650276436": [
+        "Training/image(64).jpg",
+        "Testing/image(89).jpg"
+      ],
+      "d9f0d5ef8784abb3ac7cadb3e31a9b1ef4879de8edb20a637d66c49f6c8eb60f": [
+        "Training/image(65).jpg",
+        "Testing/image(90).jpg"
+      ],
+      "6d94cb16b0e532e10913e0f7e82bc9f0e2ddc3ff08601f8f7b118b88a137e111": [
+        "Training/image(66).jpg",
+        "Testing/image(91).jpg"
+      ],
+      "ad26946bf8b6ba5be922f24ab271337964fc35675fa4d0398719e33665337ece": [
+        "Training/image(67).jpg",
+        "Testing/image(92).jpg"
+      ],
+      "bf590df79c3f0a0ee28f4c1238720e89f40e4437c827273e3a168708f6fe8476": [
+        "Training/image(68).jpg",
+        "Testing/image(93).jpg"
+      ],
+      "b577189346bc4cc74942150e5875bead25153aa474db97d1882ebf72244de3ec": [
+        "Training/image(69).jpg",
+        "Testing/image(94).jpg"
+      ],
+      "b23fe6dad4ff5e7e0fe80d1d315399658298647951c5f5e148e8c0d6ff6e3b5e": [
+        "Training/image(70).jpg",
+        "Testing/image(95).jpg"
+      ],
+      "c50e621a36b08a9c2f28e239dc00b27ce321bd8ed715a48ced97515e965473d2": [
+        "Training/image(71).jpg",
+        "Testing/image(96).jpg"
+      ],
+      "4f2893125ab87fc6fcd6cd5388db893efeb9a1a30e59f942e7743144766c78f6": [
+        "Training/image(9).jpg",
+        "Testing/image(34).jpg"
+      ]
+    }
+  },
+  "archive_path": null,
+  "archive_sha256": null
+}

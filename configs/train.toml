@@ -1,0 +1,17 @@
+data_root = "data"
+output_root = "artifacts/runs"
+split_manifest = "data/manifests/train_validation_split.csv"
+seed = 42
+epochs = 16
+batch_size = 32
+num_workers = 0
+learning_rate_backbone = 0.00001
+learning_rate_head = 0.0001
+weight_decay = 0.0001
+validation_fraction = 0.2
+early_stopping_patience = 3
+device = "auto"
+use_amp = true
+image_size = 224
+dry_run = false
+load_pretrained_weights = true
